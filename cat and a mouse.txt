@@ -1,0 +1,21 @@
+char* catAndMouse(int x, int y, int z) {
+  int xdiff, ydiff;
+  char *str1 = "Cat A";
+  char *str2 = "Cat B";
+  char *str3 = "Mouse C";
+  xdiff = z - x;
+  ydiff = z - y;
+  if (xdiff < 0) {
+    xdiff = (xdiff) * (-1);
+  }
+  if (ydiff < 0) {
+    ydiff = (ydiff) * (-1);
+  }
+  if (xdiff > ydiff) {
+    return str2;
+  } else if (ydiff > xdiff) {
+    return str1;
+  } else {
+    return str3;
+  }
+}

@@ -1,0 +1,17 @@
+char* kangaroo(int x1, int v1, int x2, int v2) {
+  static char str[] = "YES";
+  static char str1[] = "NO";
+  if (x1 == x2 && v1 == v2) {
+    return str;
+  } else if (x1 == x2 && v1 > v2) {
+    return str1;
+  } else if (x1 <= x2 && v1 <= v2) {
+    return str1;
+  } else {
+    if ((x2 - x1) % (v1 - v2) == 0) {
+      return str;
+    } else {
+      return str1;
+    }
+  }
+}
