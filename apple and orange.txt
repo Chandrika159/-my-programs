@@ -1,0 +1,26 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void countApplesAndOranges(int s, int t, int a, int b, int apples_count, int* apples, int oranges_count, int* oranges) {
+  int i, acount = 0, ocount = 0;
+  for (i = 0; i < apples_count; i++) {
+    if (apples[i] + a >= s && apples[i] + a <= t) {
+      acount++;
+    }
+  }
+  for (i = 0; i < oranges_count; i++) {
+    if (oranges[i] + b <= t && oranges[i] + b >= s) {
+      ocount++;
+    }
+  }
+  printf("%d\n%d", acount, ocount);
+}
+
+

@@ -1,0 +1,42 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+  char ar[10];
+  char br[9];
+  char x[10];
+  int i, n;
+  scanf("%s", ar);
+  if (ar[8] == 'P') {
+    if (ar[0] == '1' && ar[1] == '2') {
+      for (i = 0; i < 8; i++) {
+        br[i] = ar[i];}
+    } else {
+      x[0] = ar[0];
+      x[1] = ar[1];
+      x[2] = '\0';
+      n = atoi(x);
+      n = n + 12;
+      sprintf(x, "%d", n);
+      br[0] = x[0];
+      br[1] = x[1];
+      for (i = 2; i < 8; i++) {
+        br[i] = ar[i];
+      }}
+br[8] = '\0';
+  } else {
+    if (ar[0] == '1' && ar[1] == '2') {
+      br[0] = '0';
+      br[1] = '0';
+      for (i = 2; i < 8; i++) {
+        br[i] = ar[i];}
+    } else
+      for (i = 0; i < 8; i++) {
+        br[i] = ar[i];}
+    br[8] = '\0'; }
+  printf("%s", br);
+  return 0;}
