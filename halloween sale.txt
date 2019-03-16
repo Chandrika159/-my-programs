@@ -1,0 +1,15 @@
+int howManyGames(int p, int d, int m, int s) {
+    int games = 0;
+
+    while ((s - p) >= 0) {
+      s = s - p;
+      games++;
+
+      if ((p - d) >= m)
+        p = p - d;
+      else
+        p = m;
+    }
+
+    return games;
+  }

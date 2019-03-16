@@ -1,0 +1,23 @@
+int* permutationEquation(int p_count, int* p, int* result_count) {
+  static int ar[]={0};
+  int i=0,count=0,x=0,z=0;
+  while(x<p_count){
+  for (i = 0; i < p_count; i++) {
+    if(p[i]==x+1){
+        z=i+1;
+        break;
+    }
+  }
+  for (i = 0; i < p_count; i++) {
+      if(p[i]==z){
+          ar[x]=i+1;
+          count++;
+          break;
+    }
+}
+z=0;
+x++;
+  }
+  *result_count=count;
+  return ar;
+}
